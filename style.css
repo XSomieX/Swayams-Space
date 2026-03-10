@@ -1,0 +1,592 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:black;
+color:white;
+font-family:Inter, sans-serif;
+overflow-x:hidden;
+}
+nav{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+top:30px;
+display:flex;
+gap:50px;
+align-items:center;
+}
+.nav-link{
+position:relative;
+color:white;
+text-decoration:none;
+opacity:.8;
+font-size:18px;
+}
+
+.nav-link:hover{
+opacity:1;
+}
+
+/* indicator */
+
+.nav-indicator{
+position:absolute;
+bottom:-8px;
+height:2px;
+background:white;
+transition:all .35s cubic-bezier(.22,1,.36,1);
+}
+
+
+/* HEADER */
+
+header{
+z-index:10;
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 70px;
+
+background:rgba(20,20,20,0.35);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+padding-top:80px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#070704;
+}
+
+#name{
+font-size:60px;
+font-weight:700;
+display:flex;
+gap:4px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.scroll-indicator{
+position:absolute;
+bottom:160px;
+font-size:22px;
+opacity:.85;
+animation:bounce 1.6s infinite;
+}
+
+@keyframes bounce{
+0%{transform:translateY(0)}
+50%{transform:translateY(12px)}
+100%{transform:translateY(0)}
+}
+
+
+/* ABOUT SECTION */
+
+#about{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+
+.animation-container{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+overflow:hidden;
+z-index:1;
+}
+
+.animation-container img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+.about-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+z-index:2;
+}
+
+
+/* PROGRESS INDICATOR */
+
+.about-progress{
+position:absolute;
+left:100px;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+flex-direction:column;
+gap:18px;
+z-index:5;
+}
+
+.progress-item{
+width:8px;
+height:8px;
+border-radius:50%;
+background:white;
+opacity:.4;
+transition:all .35s ease;
+}
+
+.progress-item.active{
+width:42px;
+height:2px;
+border-radius:2px;
+opacity:1;
+}
+
+
+/* ABOUT BLOCK BASE */
+
+.about-block{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:80%;
+max-width:900px;
+opacity:0;
+filter:blur(8px);
+}
+
+
+/* BLOCK 1 */
+
+.block1{
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.b1-title{
+font-family:"Playfair Display",serif;
+font-size:72px;
+line-height:1.05;
+}
+
+.b1-text{
+font-size:16px;
+line-height:1.7;
+opacity:.85;
+}
+
+
+/* BLOCK 2 */
+
+.block2{
+left:0;
+transform:translateY(-50%);
+width:100%;
+display:flex;
+justify-content:flex-start;
+padding-left:18vw;
+}
+
+.b2-left{
+max-width:420px;
+text-align:left;
+margin-top:40px;
+}
+
+.b2-left h2{
+font-family:"Playfair Display",serif;
+font-size:40px;
+margin-bottom:16px;
+}
+
+.b2-left h3{
+font-family:"Playfair Display",serif;
+font-size:32px;
+margin-top:30px;
+margin-bottom:10px;
+}
+
+.b2-left p{
+font-size:16px;
+line-height:1.7;
+opacity:.85;
+}
+
+
+/* BLOCK 3 */
+
+.block3{
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.b3-title{
+font-family:"Playfair Display",serif;
+font-size:64px;
+line-height:1.1;
+}
+
+.b3-columns{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.b3-columns p{
+font-size:15px;
+line-height:1.7;
+opacity:.85;
+}
+/* WORK SECTION */
+
+/* WORK SECTION */
+
+/* WORK SECTION */
+/* WORK SECTION */
+
+.work{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:0 6vw;
+background:#070704;
+}
+
+.work-cards{
+display:flex;
+width:100%;
+height:70vh;
+gap:12px;
+}
+
+/* CARD BASE */
+
+.work-card{
+flex:1;
+border-radius:22px;
+overflow:hidden;
+position:relative;
+cursor:pointer;
+transition:flex .55s cubic-bezier(.22,1,.36,1);
+min-width:60px;
+}
+.work-card{
+transition:
+flex .55s cubic-bezier(.22,1,.36,1),
+transform .15s ease;
+cursor: pointer;
+}
+
+.work-card:active{
+transform:scale(.96);
+}
+
+/* DEFAULT WIDE CARD */
+
+.work-card.active{
+flex:2;
+}
+
+/* HOVERED CARD */
+
+.work-card:hover{
+flex:2;
+filter:brightness(1.05);
+}
+
+/* SHRINK OTHERS WHEN HOVERING */
+
+.work-cards:hover .work-card:not(:hover){
+flex:.6;
+}
+.work-cards{
+display:flex;
+width:100%;
+height:70vh;
+gap:12px;
+margin-top:50px;
+}
+
+/* IMAGE */
+
+.work-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter: blur(2px);        /* blur amount */
+transition: transform .6s ease, filter .4s ease;
+}
+
+/* IMAGE ZOOM */
+
+.work-card:hover img{
+transform:scale(1.1);
+}
+
+/* TEXT */
+
+.work-info{
+position:absolute;
+bottom:0;
+left:0;
+max-width:320px;   /* prevents text from stretching */
+padding:30px;
+background:linear-gradient(transparent, rgba(0,0,0,.85));
+opacity:0;
+transform:translateY(20px);
+transition:.35s;
+line-height:1.5;
+background:none;
+}
+
+/* SHOW TEXT */
+
+.work-card:hover .work-info{
+opacity:1;
+transform:translateY(0);
+}
+/* CONTACT SECTION */
+.work-desc{
+font-size:15px;
+opacity:.65;
+max-width:300px;
+}
+
+.contact{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 6vw;
+background:#070704;
+}
+
+.contact-container{
+max-width:800px;
+text-align:center;
+}
+.contact-copy{
+display:block;
+margin:-35px auto 40px auto;
+background:none;
+border:none;
+color:white;
+font-size:18px;
+opacity:.7;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact-copy:hover{
+opacity:1;
+transform:translateY(-3px);
+}
+#copyToast{
+position:fixed;
+bottom:40px;
+left:50%;
+transform:translateX(-50%) translateY(40px);
+background:rgba(30,30,30,0.9);
+color:white;
+padding:12px 22px;
+border-radius:8px;
+font-size:14px;
+opacity:0;
+pointer-events:none;
+transition:.35s;
+backdrop-filter:blur(10px);
+}
+.contact-copy{
+position:relative;
+}
+
+.contact-copy::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:100%;
+height:2px;
+background:white;
+transform:scaleX(0);
+transform-origin:left;
+transition:transform .4s ease;
+}
+
+.contact-copy:hover::after{
+transform:scaleX(1);
+}
+
+#copyToast.show{
+opacity:1;
+transform:translateX(-50%) translateY(0);
+}
+
+.contact-title{
+font-family:"Playfair Display",serif;
+font-size:64px;
+margin-bottom:20px;
+}
+
+.contact-sub{
+font-size:18px;
+opacity:.7;
+margin-bottom:50px;
+}
+
+.contact-email{
+display:inline-block;
+font-size:28px;
+font-weight:700;
+text-decoration:none;
+color:white;
+margin-bottom:50px;
+position:relative;
+}
+
+.contact-email::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:100%;
+height:2px;
+background:white;
+transform:scaleX(0);
+transform-origin:left;
+transition:transform .4s ease;
+}
+
+.contact-email:hover::after{
+transform:scaleX(1);
+}
+
+/* SOCIAL LINKS */
+
+.contact-links{
+display:flex;
+gap:40px;
+justify-content:center;
+}
+
+.contact-links a{
+text-decoration:none;
+color:white;
+font-size:18px;
+opacity:.7;
+transition:.3s;
+}
+
+.contact-links a:hover{
+opacity:1;
+transform:translateY(-3px);
+}
+/* CONTACT SECTION */
+
+.contact{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 6vw;
+background:black;
+}
+
+.contact-container{
+max-width:800px;
+text-align:center;
+}
+
+.contact-title{
+font-family:"Playfair Display",serif;
+font-size:64px;
+margin-bottom:20px;
+}
+
+.contact-sub{
+font-size:18px;
+opacity:.7;
+margin-bottom:50px;
+}
+
+.contact-email{
+display:inline-block;
+font-size:28px;
+font-weight:700;
+text-decoration:none;
+color:white;
+margin-bottom:50px;
+position:relative;
+}
+
+.contact-email::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:100%;
+height:2px;
+background:white;
+transform:scaleX(0);
+transform-origin:left;
+transition:transform .4s ease;
+}
+
+.contact-email:hover::after{
+transform:scaleX(1);
+}
+
+/* SOCIAL LINKS */
+
+.contact-links{
+display:flex;
+gap:40px;
+justify-content:center;
+}
+
+.contact-links a{
+text-decoration:none;
+color:white;
+font-size:18px;
+opacity:.7;
+transition:.3s;
+}
+
+.contact-links a:hover{
+opacity:1;
+transform:translateY(-3px);
+}

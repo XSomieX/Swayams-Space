@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Swayam's Space</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+<div class="logo">SWAYAM ⓒ</div>
+
+<nav>
+
+<a href="#home" class="nav-link active">HOME</a>
+<a href="#about" class="nav-link" id="aboutBtn">ABOUT ME</a>
+<a href="#work" class="nav-link">WORK</a>
+<a href="#contact" class="nav-link">CONTACT</a>
+
+<div class="nav-indicator"></div>
+
+</nav>
+</header>
+
+
+<section id="home"class="hero">
+
+<h1 id="name">SWAYAM SRIVASTAVA</h1>
+
+<div class="scroll-indicator">
+↓ SCROLL
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="animation-container">
+<img id="scrollAnimation" src="/public/frames/frame0001.webp">
+</div>
+
+
+<div class="about-overlay">
+
+<!-- PROGRESS INDICATOR -->
+
+<div class="about-progress">
+
+<div class="progress-item active"></div>
+<div class="progress-item"></div>
+<div class="progress-item"></div>
+
+</div>
+
+
+<!-- BLOCK 1 -->
+
+<div class="about-block block1">
+
+<div class="b1-title">
+A portfolio by Swayam
+</div>
+
+<div class="b1-text">
+Hello! I'm Swayam Srivastava and I am an engineering student. 
+I'm also a 3D designer and have been working on 3D softwares for years now. 
+I also do video editing, UI/UX designing and animation 
+</div>
+
+</div>
+
+
+<!-- BLOCK 2 -->
+
+<div class="about-block block2">
+
+<div class="b2-left">
+
+<h2>Skills</h2>
+
+<p>
+HTML, CSS, JavaScript, Three.Js, GSAP, Game Development, Git, Java, C, C++, Python. <br><br>
+3D Designing, Graphic Designing, Sound Designing, Video Editing, Animation/Rigging, UI/UX Designing, Game Designing.
+</p>
+
+<h3>Tool Experience</h3>
+
+<p>
+Blender, Davinci Resolve, Soundly, Figma, Adobe Illustrator, Visual Studio Code, Inkscape, Cavalry, Github, Unity.
+</p>
+
+<h3>Interests</h3>
+
+<p>
+I like to play video games and 3D designing and hang out with my friends.
+I absolutely LOVE eating nice food and also play a few musical instruments!
+</p>
+
+</div>
+
+</div>
+
+
+<!-- BLOCK 3 -->
+
+<div class="about-block block3">
+
+<div class="b3-title">
+Discovery of my calling
+</div>
+
+<div class="b3-columns">
+
+<p>
+I always had a knack for art and creative things but i never truly tried "designing" up until a 
+good enough time in my life and never thought it was worth much
+</p>
+
+<p>
+Then one day one of my friends introduced me to blender and that's where it all began. And after
+joining college my value and interest in design has only grown further
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+<section id="work" class="work">
+
+<div class="work-cards">
+
+<div class="work-card active" data-link="https://somies-park.vercel.app/">
+<img src="/work/example project.jpeg">
+<div class="work-info">
+<h3>Project- Somie's Park</h3>
+<p>Creative development</p>
+<br>
+<p class="work-desc">Personal project made by me as my first portfolio website using three.js, GSAP amd Blender</p>
+</div>
+</div>
+
+<div class="work-card" data-link="https://code2create.acmvit.in/">
+<img src="/work/C2C.png">
+<div class="work-info">
+<h3>Code2Create Website</h3>
+<p>UI/UX design</p>
+<br>
+<p class="work-desc">Website designed by me along with the ACM VIT design team for hosting of the largest hackathon in VIT Vellore</p>
+</div>
+</div>
+
+<div class="work-card" data-link="https://rcpc.acmvit.in/">
+<img src="/work/f1.png">
+<div class="work-info">
+<h3>Reverse coding website</h3>
+<p>UI/UX design</p>
+<br>
+<p class="work-desc">Website designed by me along with the ACM VIT design team for hosting of one of the biggest competetive coding event in VIT Vellore</p>
+</div>
+</div>
+
+<div class="work-card" data-link="https://cryptichunt.acmvit.in/">
+<img src="/work/CH.png">
+<div class="work-info">
+<h3>Cryptic Hunt app and website</h3>
+<p>Creative coding</p>
+<br>
+<p class="work-desc">App and website designed by me along with the ACM VIT design team for hosting south Asia's biggest scavenger hunt</p>
+</div>
+</div>
+
+<div class="work-card">
+<img src="/work/TAGRED.png">
+<div class="work-info">
+<h3>TAGRED</h3>
+<p>Game design</p>
+<br>
+<p class="work-desc">Horror game made upon a replica of VIT Vellore campus as the map (still under development)</p>
+</div>
+</div>
+</div>
+
+</section>
+<section id="contact" class="contact">
+
+<div class="contact-container">
+
+<h2 class="contact-title">Let's Work Together</h2>
+
+<p class="contact-sub">
+Have a project in mind or just want to say hi?
+</p>
+<a class="contact-email" href="mailto:swayam9891@gmail.com">
+swayam9891@gmail.com
+</a>
+
+<button class="contact-copy" id="copyEmailBtn">
+Copy Email
+</button>
+
+<div class="contact-links">
+<a href="https://github.com/XSomieX" target="_blank">Github</a>
+<a href="https://www.linkedin.com/in/swayam-srivastava-3b6401326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+<a href="https://www.instagram.com/x_somie_x?igsh=MXF2c2k0aW93d2JnbQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+</div>
+
+<div id="copyToast">Email copied to clipboard!</div>
+
+</div>
+
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
